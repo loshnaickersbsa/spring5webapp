@@ -41,7 +41,7 @@ public class BootStrapRunner implements CommandLineRunner {
         Book fire = new Book( "pro fire safety" ,  "123125");
         mel.getBooks().add(fire);
         fire.getAuthors().add(mel);
-        authorRepository.save(losh);
+        authorRepository.save(mel);
         bookRespository.save(fire);
 
         Book fire2 = new Book( "pro fire safety the sequel" ,  "123126");
@@ -49,8 +49,9 @@ public class BootStrapRunner implements CommandLineRunner {
         bookRespository.save(fire2);
 
         System.out.println("Books  " + bookRespository.count());
-        System.out.println("End of Bootstrap " + authorRepository.toString());
+        System.out.println("Authors " + authorRepository.count());
 
+        //System.out.println("Authors " + bookRespository.);
     }
 
 
